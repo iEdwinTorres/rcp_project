@@ -52,3 +52,9 @@ p {
   -webkit-line-clamp: 4;
 	margin-block-start: .5em;
 }
+
+button {
+  margin:0 auto;
+  display:block;
+  font-size: 12pt;
+}
