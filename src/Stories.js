@@ -3,6 +3,14 @@ import Data from "./Data.json";
 
 var stories = Data.stories;
 
+var monthNames = ["January", "Febuary", "March", "April", "May", "June",
+ "July", "August", "September", "October", "November", "December"];
+
+function dateFormat(date){
+  var format = new Date(date);
+  return monthNames[format.getMonth()]+' '+format.getDate()+', '+format.getFullYear();
+}
+
 class Stories extends Component {
   render() {
     return (
@@ -17,7 +25,7 @@ class Stories extends Component {
               </div>
               <div className='div2'>
                 <a href={story.link}>
-                  <strong id='title'>{story.title}</strong> <strong id='date'>{story.date}</strong>
+                  <strong id='title'>{story.title}</strong> <strong id='date'>{dateFormat(story.date)}</strong>
                 </a>
               </div>
               <div className='div3'>
